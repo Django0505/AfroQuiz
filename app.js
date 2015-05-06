@@ -17,6 +17,10 @@ app.get("/learn", function (req, res) {
 	res.render("learn");
 });
 
+app.get("/uganda_quiz", function(req, res){
+	res.render("uganda_quiz");
+})
+
 app.get("*", function(req, res){
 	res.render("default_page")
 });
