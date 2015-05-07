@@ -19,6 +19,22 @@ app.get("/learn", function (req, res) {
 
 app.get("/uganda_quiz", function(req, res){
 	res.render("uganda_quiz");
+});
+
+app.get("/chad_quiz", function(req, res){
+	res.render("chad_quiz");
+});
+
+app.get("/nigeria_quiz", function(req, res){
+	res.render("nigeria_quiz");
+});
+
+app.get("/senegal_quiz", function(req, res){
+	res.render("senegal_quiz");
+});
+
+app.get("/ethiopia_quiz", function(req, res){
+	res.render("ethiopia_quiz");
 })
 
 app.get("*", function(req, res){
