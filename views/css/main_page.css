@@ -56,3 +56,21 @@ body {
 .afro-quiz {
 	float: right;
 }
+
+.question {
+	background-color: rgb(200,220,200);
+	height: 3em;
+	font-weight: bolder;
+}
+
+.answers {
+	height: 6em;
+	text-align: center;
+}
+
+.quiz {
+	border: 1px black solid;
+	padding: 0;
+	margin: 1em;
+	border-radius: 0 0 2em 2em;
+}

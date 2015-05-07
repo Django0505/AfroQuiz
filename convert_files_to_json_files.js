@@ -6,9 +6,10 @@ convert_question_csv_to_json = function (filename, filename2) {
 	var file_rows = read_file.split(regexp);
 	var file_row_cols = file_rows.map(function(row){
 		var line = row.split(",");
+
 		return {
 			question: line[0],
-			answer: line[1],
+			answer: line[1].split(";"),
 			country: line[2]
 		}
 	});
