@@ -21,7 +21,7 @@ convert_question_csv_to_json = function (filename, filename2) {
 }
 
 convert_question_csv_to_json("./uganda_questions.csv", "uganda_questions.json");
-/*convert_question_csv_to_json("./chad_questions.csv", "chad_questions.json");
+convert_question_csv_to_json("./chad_questions.csv", "chad_questions.json");
 convert_question_csv_to_json("./ethiopia_questions.csv", "ethiopia_questions.json");
 convert_question_csv_to_json("./nigeria_questions.csv", "nigeria_questions.json");
-convert_question_csv_to_json("./senegal_questions.csv", "senegal_questions.json");*/
+convert_question_csv_to_json("./senegal_questions.csv", "senegal_questions.json");
