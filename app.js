@@ -18,23 +18,32 @@ app.get("/learn", function (req, res) {
 });
 
 app.get("/uganda_quiz", function(req, res){
-	res.render("uganda_quiz");
+	var uganda_quiz = require("./uganda_questions.json");
+	res.render("uganda_quiz", {uganda_quiz:uganda_quiz});
 });
 
+app.post("/uganda_quiz/uganda_quiz_report", function(req, res){
+	res.redirect("/");
+})
+
 app.get("/chad_quiz", function(req, res){
-	res.render("chad_quiz");
+	var chad_quiz = require("./chad_questions.json");
+	res.render("chad_quiz", {chad_quiz:chad_quiz});
 });
 
 app.get("/nigeria_quiz", function(req, res){
-	res.render("nigeria_quiz");
+	var nigeria_quiz = require("./nigeria_questions.json");
+	res.render("nigeria_quiz", {nigeria_quiz:nigeria_quiz});
 });
 
 app.get("/senegal_quiz", function(req, res){
-	res.render("senegal_quiz");
+	var senegal_quiz = require("./senegal_questions.json");
+	res.render("senegal_quiz", {senegal_quiz:senegal_quiz});
 });
 
 app.get("/ethiopia_quiz", function(req, res){
-	res.render("ethiopia_quiz");
+	var ethiopia_quiz = require("./ethiopia_questions.json");
+	res.render("ethiopia_quiz", {ethiopia_quiz:ethiopia_quiz});
 })
 
 app.get("*", function(req, res){
