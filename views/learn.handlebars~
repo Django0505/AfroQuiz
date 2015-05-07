@@ -1,0 +1,58 @@
+<div class="col-xs-2"></div>
+<div class="container col-xs-8">
+	<div class="container">
+		<a class="btn btn-primary col-xs-8" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+		  Uganda
+		</a>
+		<div class="collapse col-xs-8" style="clear:both" id="collapseExample">
+		  <div class="well">
+		    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis voluptatem, reiciendis exercitationem illo, deserunt rerum quibusdam inventore excepturi beatae. Nam quasi quaerat, velit perspiciatis quidem mollitia sint aut, in accusamus. <a href="/uganda_quiz">Take the AfroQuizz</a>
+		  </div>
+		</div>
+	</div>
+
+	<div class="container">
+		<a class="btn btn-primary col-xs-8" data-toggle="collapse" href="#collapseChad" aria-expanded="false" aria-controls="collapseChad">
+		  Chad
+		</a>
+		<div class="collapse col-xs-8" style="clear:both" id="collapseChad">
+		  <div class="well">
+				
+		    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis voluptatem, reiciendis exercitationem illo, deserunt rerum quibusdam inventore excepturi beatae. Nam quasi quaerat, velit perspiciatis quidem mollitia sint aut, in accusamus. <a href="/chad_quiz">Take the AfroQuizz</a>
+		  </div>
+		</div>
+	</div>
+
+	<div class="container">
+		<a class="btn btn-primary col-xs-8" data-toggle="collapse" href="#collapseSenegal" aria-expanded="false" aria-controls="collapseChad">
+		  Senegal
+		</a>
+		<div class="collapse col-xs-8" style="clear:both" id="collapseSenegal">
+		  <div class="well">
+		    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis voluptatem, reiciendis exercitationem illo, deserunt rerum quibusdam inventore excepturi beatae. Nam quasi quaerat, velit perspiciatis quidem mollitia sint aut, in accusamus. <a href="/senegal_quiz">Take the AfroQuizz</a>
+		  </div>
+		</div>
+	</div>
+
+	<div class="container">
+		<a class="btn btn-primary col-xs-8" data-toggle="collapse" href="#collapseEthiopia" aria-expanded="false" aria-controls="collapseChad">
+		  Ethiopia
+		</a>
+		<div class="collapse col-xs-8" style="clear:both" id="collapseEthiopia">
+		  <div class="well">
+		    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis voluptatem, reiciendis exercitationem illo, deserunt rerum quibusdam inventore excepturi beatae. Nam quasi quaerat, velit perspiciatis quidem mollitia sint aut, in accusamus. <a href="/ethiopia_quiz">Take the AfroQuizz</a>
+		  </div>
+		</div>
+	</div>
+
+	<div class="container">
+		<a class="btn btn-primary col-xs-8" data-toggle="collapse" href="#collapseNigeria" aria-expanded="false" aria-controls="collapseChad">
+		  Nigeria
+		</a>
+		<div class="collapse col-xs-8" style="clear:both" id="collapseNigeria">
+		  <div class="well">
+		    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis voluptatem, reiciendis exercitationem illo, deserunt rerum quibusdam inventore excepturi beatae. Nam quasi quaerat, velit perspiciatis quidem mollitia sint aut, in accusamus. <a href="/nigeria_quiz">Take the AfroQuizz</a>
+		  </div>
+		</div>
+	</div>
+</div>
