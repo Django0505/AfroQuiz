@@ -1,0 +1,58 @@
+a {
+	text-decoration: none;
+	margin: 0 auto;
+	padding: 0;
+	height: 4em;
+	text-align: center;
+}
+
+a:hover {
+	text-decoration: none
+}
+
+h1 {
+	text-align: center;
+	font: 4em Courier, "Comic Sans MS", Georgia, sans-serif;
+	font-weight: bolder;
+	color: rgb(133,0,0);
+}
+
+h3 {
+	text-align: center;
+	padding: 5em 0 0 0;
+	margin: 0;
+}
+
+h2 {
+	text-align: center;
+	font-size: 2.5em
+}
+
+.navbar-fixed-top {
+	position: relative;
+	padding: 0;
+	margin: 0;
+
+}
+
+
+.main-container {
+	padding:0 0 5em 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+body {
+	background-color: rgb(250,250,255);
+}
+
+.play-btn {
+	width: 100%;
+	height: 5em;
+	font-size: 3em;
+	font-weight: bolder;
+}
+
+.afro-quiz {
+	float: right;
+}
