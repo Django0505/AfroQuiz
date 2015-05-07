@@ -1,17 +1,27 @@
-<div class="container col-lg-12">
+<div class="container">
+	<form action="uganda_quiz/uganda_quiz_report" method="POST">
+
 		{{#nigeria_quiz}}
-	<div class="col-lg-12">
-		<div class="col-lg-12">{{question}}</div>
-		<div class="row col-lg-12">
-			<div class="funkyradio row">
-		        <div class="funkyradio-default col-lg-3">
-		        	{{#each answer}}
-		            <input type="checkbox" name="checkbox" id="checkbox1" value="{{this}}" unchecked/>
-		            <label for="checkbox1">{{this}}</label>
-		            {{/each}}
-		        </div>
+		<div class="col-lg-12 quiz">
+			<div class="col-lg-12 question">
+				{{question}}
+			</div>
+			<div class="answers">
+				<div class="funkyradio">
+			        <div class="funkyradio-default col-lg-12">
+			        	{{#each answer}}
+			            <input type="checkbox" name="checkbox" id="checkbox1" value="{{this}}" unchecked/>
+			            <label for="checkbox1">{{this}}</label>
+			            {{/each}}
+			        </div>
+				</div>
 			</div>
 		</div>
-	</div>
-		{{/nigeria_quiz}}
+			{{/nigeria_quiz}}
+
+
+		<div>
+			<input type="submit" value="Save">
+		</div>
+	</form>
 </div>
