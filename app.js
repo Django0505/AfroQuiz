@@ -22,6 +22,10 @@ app.get("/uganda_quiz", function(req, res){
 	res.render("uganda_quiz", {uganda_quiz:uganda_quiz});
 });
 
+app.post("/uganda_quiz/uganda_quiz_report", function(req, res){
+	res.redirect("/");
+})
+
 app.get("/chad_quiz", function(req, res){
 	var chad_quiz = require("./chad_questions.json");
 	res.render("chad_quiz", {chad_quiz:chad_quiz});

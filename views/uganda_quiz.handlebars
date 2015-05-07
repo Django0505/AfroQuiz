@@ -1,7 +1,7 @@
 <div class="container">
-		{{#uganda_quiz}}
+	<form action="uganda_quiz/uganda_quiz_report" method="POST">
 
-	<form action="uganda_quiz/uganda_quiz_report" method="POST"></form>
+		{{#uganda_quiz}}
 		<div class="col-lg-12 quiz">
 			<div class="col-lg-12 question">
 				{{question}}
@@ -23,4 +23,5 @@
 		<div>
 			<input type="submit" value="Save">
 		</div>
+	</form>
 </div>
