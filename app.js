@@ -40,7 +40,16 @@ app.get("/uganda_quiz", function(req, res){
 });
 
 app.post("/uganda_quiz/uganda_quiz_report", function(req, res){
-	console.log(req.body)
+
+	var countries = countriesMap["uganda_quiz"];
+
+	var answers = countries.map(function(object, i){
+		
+		return object.answer;
+	});
+
+	console.log(answers)
+
 	res.redirect("/");
 })
 

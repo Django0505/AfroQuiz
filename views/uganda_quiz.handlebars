@@ -10,7 +10,7 @@
 				<div class="funkyradio">
 			        <div class="funkyradio-default col-lg-12">
 			        	{{#each options}}
-			            <input type="checkbox" name="answer_{{this.id}}" id="checkbox1"/>
+			            <input type="checkbox" name="answer_{{this.id}}" value="{{this.name}}" id="checkbox1"/>
 			            <label for="checkbox1">{{this.name}}</label>
 			            {{/each}}
 			        </div>
