@@ -1,5 +1,7 @@
 <div class="container col-lg-12">
+		{{#ethiopia_quiz}}
 	<div class="col-lg-12">
+<<<<<<< HEAD
 			<p>Lorem ipsum dolor sit amet?</p>
 			<div class="row col-lg-10">
 				<div class="funkyradio row">
@@ -122,8 +124,19 @@
 		        <div class="funkyradio-danger col-lg-3">
 		            <input type="checkbox" name="checkbox" id="checkbox4" unchecked/>
 		            <label for="checkbox4">Fourth</label>
+=======
+		<div class="col-lg-12">{{question}}</div>
+		<div class="row col-lg-12">
+			<div class="funkyradio row">
+		        <div class="funkyradio-default col-lg-3">
+		        	{{#each answer}}
+		            <input type="checkbox" name="checkbox" id="checkbox1" value="{{this}}" unchecked/>
+		            <label for="checkbox1">{{this}}</label>
+		            {{/each}}
+>>>>>>> 9cd90c552d5761d90ce42051f2860bf468929284
 		        </div>
 			</div>
 		</div>
 	</div>
+		{{/ethiopia_quiz}}
 </div>
