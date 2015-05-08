@@ -76,7 +76,7 @@ app.post("/senegal_quiz/senegal_quiz_report", function(req, res){
 		answers_2 = ["Gambia","Guinea-Bissau","Mali"],
 		Question_3 : "What is Senegal's currency?",
 		answers_3 =  "CFA franc(XOF)",
-		Question_4 : "What is the capital town of Senegal?",
+		Question_4 : "What is the caspital town of Senegal?",
 		answers_4 =  "Dakar",
 		Question_5 : "What are the two largest cities in Senegal?",
 		answers_5 = ["Dakar","Grand Dakar"],
