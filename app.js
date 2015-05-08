@@ -44,16 +44,25 @@ app.post("/uganda_quiz/uganda_quiz_report", function(req, res){
 	var countries = countriesMap["uganda_quiz"];
 	
 	var answers = {
-			Question_1 : "True or false? Age does not earn earn respect in many families in Nigeria." ,
+			Question_1 : "Which is the longest river in Uganda?",
 			answer_1 : "Nile River",
+			Question_2 : "What makes Uganda more temperate than surrounding countries?",
 			answer_2 : "Altitude",
+			Question_3 : "What is Uganda's climate?",
 			answer_3 : "Tropical",
+			Question_4 : "What are Uganda's primary exports?",
 			answer_4 : ["Coffee","Tea","Cotton","Flowers"],
+			Question_5 : "Which sea Uganda has access to?",
 			answer_5 : "None",
+			Question_6 : "On what date do they celebrate independency?",
 			answer_6 : "Oct 09",
+			Question_7 :  "What was the last population count?",
 			answer_7 : "35 million",
+			Question_8 : "How may dry seasons Uganda experience in a year?",
 			answer_8 : "2",
+			Question_9 : "Which political party is ruling in Uganda?",
 			answer_9 : "National Resistance Movement",
+			Question_10 : "True or False? The Equator does not pass through Uganda.",
 			answer_10 : "TRUE"
 		};
 
@@ -130,7 +139,7 @@ app.post("/chad_quiz/chad_quiz_report", function(req, res){
 		console.log(k)
 	});
 
-	res.redirect("/chad_quiz",{answer:answer});
+	res.render("/chad_quiz",{answer:answer});
 })
 
 app.get("/nigeria_quiz", function(req, res){
@@ -143,6 +152,42 @@ app.get("/senegal_quiz", function(req, res){
 
 app.get("/ethiopia_quiz", function(req, res){
 	res.render("ethiopia_quiz", {ethiopia_quiz:countriesMap["ethiopia_quiz"]});
+
+});
+app.post("/ethiopia_quiz/ethiopia_quiz_report", function(req, res){
+
+	var countries = countriesMap["ethiopia_quiz"];
+	
+	var answers = {
+			Question_1 : "How many national sport teams does Ethiopia have?" ,
+			answer_1 : "2",
+			Question_2 :"What is the life expectancy in Ethopia?",
+			answer_2 : "42years",
+			Question_3 :"True or False? Ethiopia never lost independence?",
+			answer_3 : "TRUE",
+			Question_4 :"What is Ethopia's national dish?,",
+			answer_4 : "Wat",
+			Question_5 :"How many months does the Ethiopian calendar consist of?",
+			answer_5 : "13 months",
+			Question_6 :"What is Ethopia's currency?",
+			answer_6 : "Birr",
+			Question_7 :"The constitution that is in use now replaced something. What is it replacing?",
+			answer_7 : "Shengo",
+			Question_8 :"What is Ethipia's country code?",
+			answer_8 : "251",
+			Question_9 :"The name Ethiopia mean “burnt of visage”. Which language is it derived from?",
+			answer_9 : "Greek",
+			Question_10 :"The counntry has 2 self autonomous regions, what those regions?",
+			answer_10 : ["Capital Addis Ababa","Dire Dawa"]
+		};
+
+	countries.forEach(function(country, i){
+		var k = 1+i;
+		console.log(k)
+	});
+
+	res.render("ethiopia_answers", {answers : answers,
+							});
 })
 
 app.get("*", function(req, res){
