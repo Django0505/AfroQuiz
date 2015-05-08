@@ -66,13 +66,12 @@ app.post("/uganda_quiz/uganda_quiz_report", function(req, res){
 			answer_10 : "TRUE"
 		};
 
-	countries.forEach(function(country, i){
-		var k = 1+i;
-		console.log(k)
-	});
+	console.log(req.body)
 
-	res.render("uganda_answers", {answers : answers,
-							});
+	res.render("uganda_answers", {
+				answers : answers,
+				yours : req.body
+				});
 })
 
 app.post("/senegal_quiz/senegal_quiz_report", function(req, res){
