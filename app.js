@@ -44,16 +44,25 @@ app.post("/uganda_quiz/uganda_quiz_report", function(req, res){
 	var countries = countriesMap["uganda_quiz"];
 	
 	var answers = {
-			Question_1 : "True or false? Age does not earn earn respect in many families in Nigeria." ,
+			Question_1 : "Which is the longest river in Uganda?",
 			answer_1 : "Nile River",
+			Question_2 : "What makes Uganda more temperate than surrounding countries?",
 			answer_2 : "Altitude",
+			Question_3 : "What is Uganda's climate?",
 			answer_3 : "Tropical",
+			Question_4 : "What are Uganda's primary exports?",
 			answer_4 : ["Coffee","Tea","Cotton","Flowers"],
+			Question_5 : "Which sea Uganda has access to?",
 			answer_5 : "None",
+			Question_6 : "On what date do they celebrate independency?",
 			answer_6 : "Oct 09",
+			Question_7 :  "What was the last population count?",
 			answer_7 : "35 million",
+			Question_8 : "How may dry seasons Uganda experience in a year?",
 			answer_8 : "2",
+			Question_9 : "Which political party is ruling in Uganda?",
 			answer_9 : "National Resistance Movement",
+			Question_10 : "True or False? The Equator does not pass through Uganda.",
 			answer_10 : "TRUE"
 		};
 
