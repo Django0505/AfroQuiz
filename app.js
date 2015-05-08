@@ -80,23 +80,23 @@ app.post("/senegal_quiz/senegal_quiz_report", function(req, res){
 	var countries = countriesMap["senegal_quiz"];
 	var answers = {
 		Question_1 : "Name 3 languages spoken in Senegal?",
-		answers_1 = ["French;Wolof;Soninke"],
+		answers_1 : ["French", "Wolof","Soninke"],
 		Question_2 : "What are  three border countries of Senegal?",
-		answers_2 = ["Gambia","Guinea-Bissau","Mali"],
+		answers_2 : ["Gambia","Guinea-Bissau","Mali"],
 		Question_3 : "What is Senegal's currency?",
-		answers_3 =  "CFA franc(XOF)",
+		answers_3 :  "CFA franc(XOF)",
 		Question_4 : "What is the capital town of Senegal?",
-		answers_4 =  "Dakar",
+		answers_4 :  "Dakar",
 		Question_5 : "What are the two largest cities in Senegal?",
-		answers_5 = ["Dakar","Grand Dakar"],
+		answers_5 : ["Dakar","Grand Dakar"],
 		Question_6 : "What is the population count?",
-		answers_6 =  "13,6 million",
+		answers_6 :  "13,6 million",
 		Question_7 : "What is Senegal's growth rate?",
-		answers_7 =  "4%",
+		answers_7 :  "4%",
 		Question_8 : "What is the percentage of Islam?",
-		answers_8 =  "90%",
+		answers_8 :  "90%",
 		Question_9 : "What is their internet code?",
-		answers_9 =  ".sn"
+		answers_9 :  ".sn"
 	}
 
 	countries.forEach(function(country, i){
@@ -116,22 +116,22 @@ app.post("/chad_quiz/chad_quiz_report", function(req, res){
 	var countries = countriesMap["chad_quiz"];
 
 	var answers = {
-		Question_1 = "What do you call people from Chad?",
-		answer_1 = "Chadians",
-		Question_2 = "What are the colours in Chad nation flag?",
-		answer_2 = ["Red", "Blue", "Yellow"],
-		Question_3 = "Chad's flag is Similar to which countries flag?",
-		answer_3 = "Romania",
-		Question_4 ="Name the two rivers in Chad that are only navigable in wet seasons?",
-		answer_4 = ["Chari river","Legon river"],
-		Question_5 ="Chad's capital town?",
-		answer_5 = "N'Djamena",
-		Question_6 = "Name 2 Chad's official languages?",
-		answer_6 = ["French","Arabic"],
-		Question_7 ="How many regions is Chad divided into?",
-		answer_7 = "22 Regions",
-		Question_8 = "What percantage of Chad's population is poor?"
-		answer_8 = "80%"
+		Question_1 : "What do you call people from Chad?",
+		answer_1 : "Chadians",
+		Question_2 : "What are the colours in Chad nation flag?",
+		answer_2 : ["Red", "Blue", "Yellow"],
+		Question_3 : "Chad's flag is Similar to which countries flag?",
+		answer_3 : "Romania",
+		Question_4 :"Name the two rivers in Chad that are only navigable in wet seasons?",
+		answer_4 : ["Chari river","Legon river"],
+		Question_5 :"Chad's capital town?",
+		answer_5 : "N'Djamena",
+		Question_6 : "Name 2 Chad's official languages?",
+		answer_6 : ["French","Arabic"],
+		Question_7 :"How many regions is Chad divided into?",
+		answer_7 : "22 Regions",
+		Question_8 : "What percantage of Chad's population is poor?",
+		answer_8 : "80%"
 	}
 
 	countries.forEach(function(country, i){
