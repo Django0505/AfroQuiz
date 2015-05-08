@@ -66,11 +66,6 @@ app.post("/uganda_quiz/uganda_quiz_report", function(req, res){
 			answer_10 : "TRUE"
 		};
 
-	countries.forEach(function(country, i){
-		var k = 1+i;
-		console.log(k)
-	});
-
 	res.render("uganda_answers", {answers : answers,
 							});
 })
@@ -101,11 +96,6 @@ app.post("/senegal_quiz/senegal_quiz_report", function(req, res){
 		Question_9 : "What is their internet code?",
 		answers_9 :  ".sn"
 	}
-
-	countries.forEach(function(country, i){
-		var k = 1+i;
-		console.log(k)
-	});
 
 	res.redirect("/senegal_quiz");
 })
