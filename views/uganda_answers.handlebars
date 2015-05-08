@@ -1,4 +1,5 @@
 <div class="container">
+	<h2>Answers</h2>
 	<ul>
 		{{#answers}}
 			{{this.Question_1}}
@@ -23,4 +24,32 @@
 			<li>{{this.answer_10}}</li>
 		{{/answers}}
 	</ul>
+</div>
+
+<div class="container">
+	<h2>Your Answers</h2>
+	<ol>
+		{{#yours}}
+			{{this.Question_1}}
+			<li>{{answer_1}}</li>
+			{{this.Question_2}}
+			<li>{{this.answer_2}}</li>
+			{{this.Question_3}}
+			<li>{{this.answer_3}}</li>
+			{{this.Question_4}}
+			<li>{{this.answer_4}}</li>
+			{{this.Question_5}}
+			<li>{{this.answer_5}}</li>
+			{{this.Question_6}}
+			<li>{{this.answer_6}}</li>
+			{{this.Question_7}}
+			<li>{{this.answer_7}}</li>
+			{{this.Question_8}}
+			<li>{{this.answer_8}}</li>
+			{{this.Question_9}}
+			<li>{{this.answer_9}}</li>
+			{{this.Question_10}}
+			<li>{{this.answer_10}}</li>
+		{{/yours}}
+	</ol>
 </div>
