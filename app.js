@@ -152,6 +152,42 @@ app.get("/senegal_quiz", function(req, res){
 
 app.get("/ethiopia_quiz", function(req, res){
 	res.render("ethiopia_quiz", {ethiopia_quiz:countriesMap["ethiopia_quiz"]});
+
+});
+app.post("/ethiopia_quiz/ethiopia_quiz_report", function(req, res){
+
+	var countries = countriesMap["ethiopia_quiz"];
+	
+	var answers = {
+			Question_1 : "How many national sport teams does Ethiopia have?" ,
+			answer_1 : "2",
+			Question_2 :"What is the life expectancy in Ethopia?",
+			answer_2 : "42years",
+			Question_3 :"True or False? Ethiopia never lost independence?",
+			answer_3 : "TRUE",
+			Question_4 :"What is Ethopia's national dish?,",
+			answer_4 : "Wat",
+			Question_5 :"How many months does the Ethiopian calendar consist of?",
+			answer_5 : "13 months",
+			Question_6 :"What is Ethopia's currency?",
+			answer_6 : "Birr",
+			Question_7 :"The constitution that is in use now replaced something. What is it replacing?",
+			answer_7 : "Shengo",
+			Question_8 :"What is Ethipia's country code?",
+			answer_8 : "251",
+			Question_9 :"The name Ethiopia mean “burnt of visage”. Which language is it derived from?",
+			answer_9 : "Greek",
+			Question_10 :"The counntry has 2 self autonomous regions, what those regions?",
+			answer_10 : ["Capital Addis Ababa","Dire Dawa"]
+		};
+
+	countries.forEach(function(country, i){
+		var k = 1+i;
+		console.log(k)
+	});
+
+	res.render("ethiopia_answers", {answers : answers,
+							});
 })
 
 app.get("*", function(req, res){
