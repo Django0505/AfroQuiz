@@ -42,14 +42,28 @@ app.get("/uganda_quiz", function(req, res){
 app.post("/uganda_quiz/uganda_quiz_report", function(req, res){
 
 	var countries = countriesMap["uganda_quiz"];
-	var answers = req.body;
+	
+	var answers = {
+			Question_1 : "True or false? Age does not earn earn respect in many families in Nigeria." ,
+			answer_1 : "Nile River",
+			answer_2 : "Altitude",
+			answer_3 : "Tropical",
+			answer_4 : ["Coffee","Tea","Cotton","Flowers"],
+			answer_5 : "None",
+			answer_6 : "Oct 09",
+			answer_7 : "35 million",
+			answer_8 : "2",
+			answer_9 : "National Resistance Movement",
+			answer_10 : "TRUE"
+		};
 
 	countries.forEach(function(country, i){
 		var k = 1+i;
 		console.log(k)
 	});
 
-	res.redirect("/uganda_quiz");
+	res.render("uganda_answers", {answers : answers,
+							});
 })
 
 app.get("/chad_quiz", function(req, res){
