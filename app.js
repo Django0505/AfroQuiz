@@ -42,9 +42,11 @@ app.get("/uganda_quiz", function(req, res){
 app.post("/uganda_quiz/uganda_quiz_report", function(req, res){
 
 	var countries = countriesMap["uganda_quiz"];
+	var answers = req.body;
 
-	countries.forEach(function(country){
-		console.log(country["answer"]);
+	countries.forEach(function(country, i){
+		var k = 1+i;
+		console.log(answers);
 	});
 
 	res.redirect("/");
