@@ -148,6 +148,42 @@ app.get("/nigeria_quiz", function(req, res){
 	res.render("nigeria_quiz", {nigeria_quiz:countriesMap["nigeria_quiz"]});
 });
 
+app.post("/nigeria_quiz/nigeria_quiz_report", function(req, res){
+
+var countries = countriesMap["nigeria_quiz"];
+
+var answers = {
+Question_1 :"True or false? Age does not earn earn respect in many families in Nigeria.",
+				answer_1 :"FALSE",
+				Question_2 :"What are 3 neighbouring countries of Nigeria?",
+				answer_2 :["Republic of Benin","Chad","Cameroon","Republic of Benin"],
+				Question_3 :"True of False? Nigeria is one of the largest nations in Africa.",
+				answer_3 :"TRUE",
+				Question_4 :"Who is the president of Nigeria?",
+				answer_4 :"Muhammadu Buhari",
+				Question_5:"How do you address older siblings in Nigeria?",
+				answer_5 :["Senior Sister","Senior Brother"],
+				Question_6 :"Which river flows through Nigeria?",
+				answer_6 :"Niger",
+				Question_7 :"What is Nigeria's national anthem?",
+				answer_7 :",Arise O compatriots",
+				Question_8 :"What is Nigeria's currency?",
+				answer_8 :"Naira",
+				Question_9:"How many colours does their flag have?",
+				answer_9 :"2",
+				Question_10 :"What is the name of Nigeria's national football team? ",
+				answer_10 :"Super Eagles"			
+	};
+
+countries.forEach(function(country, i){
+		var k = 1+i;
+		console.log(k)
+	});
+
+	res.render("nigeria_answers", {answers : answers,
+							});
+})				
+
 app.get("/senegal_quiz", function(req, res){
 	res.render("senegal_quiz", {senegal_quiz:countriesMap["senegal_quiz"]});
 });
