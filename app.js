@@ -46,10 +46,10 @@ app.post("/uganda_quiz/uganda_quiz_report", function(req, res){
 
 	countries.forEach(function(country, i){
 		var k = 1+i;
-		console.log(answers);
+		console.log(k)
 	});
 
-	res.redirect("/");
+	res.redirect("/uganda_quiz");
 })
 
 app.get("/chad_quiz", function(req, res){
