@@ -139,7 +139,7 @@ app.post("/chad_quiz/chad_quiz_report", function(req, res){
 		console.log(k)
 	});
 
-	res.redirect("/chad_quiz",{answer:answer});
+	res.render("/chad_quiz",{answer:answer});
 })
 
 app.get("/nigeria_quiz", function(req, res){
