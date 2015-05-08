@@ -44,16 +44,25 @@ app.post("/uganda_quiz/uganda_quiz_report", function(req, res){
 	var countries = countriesMap["uganda_quiz"];
 	
 	var answers = {
-			Question_1 : "True or false? Age does not earn earn respect in many families in Nigeria." ,
+			Question_1 : "Which is the longest river in Uganda?",
 			answer_1 : "Nile River",
+			Question_2 : "What makes Uganda more temperate than surrounding countries?",
 			answer_2 : "Altitude",
+			Question_3 : "What is Uganda's climate?",
 			answer_3 : "Tropical",
+			Question_4 : "What are Uganda's primary exports?",
 			answer_4 : ["Coffee","Tea","Cotton","Flowers"],
+			Question_5 : "Which sea Uganda has access to?",
 			answer_5 : "None",
+			Question_6 : "On what date do they celebrate independency?",
 			answer_6 : "Oct 09",
+			Question_7 :  "What was the last population count?",
 			answer_7 : "35 million",
+			Question_8 : "How may dry seasons Uganda experience in a year?",
 			answer_8 : "2",
+			Question_9 : "Which political party is ruling in Uganda?",
 			answer_9 : "National Resistance Movement",
+			Question_10 : "True or False? The Equator does not pass through Uganda.",
 			answer_10 : "TRUE"
 		};
 
@@ -66,9 +75,72 @@ app.post("/uganda_quiz/uganda_quiz_report", function(req, res){
 							});
 })
 
+app.post("/senegal_quiz/senegal_quiz_report", function(req, res){
+
+	var countries = countriesMap["senegal_quiz"];
+	var answers = {
+		Question_1 : "Name 3 languages spoken in Senegal?",
+		answers_1 = ["French;Wolof;Soninke"],
+		Question_2 : "What are  three border countries of Senegal?",
+		answers_2 = ["Gambia","Guinea-Bissau","Mali"],
+		Question_3 : "What is Senegal's currency?",
+		answers_3 =  "CFA franc(XOF)",
+		Question_4 : "What is the capital town of Senegal?",
+		answers_4 =  "Dakar",
+		Question_5 : "What are the two largest cities in Senegal?",
+		answers_5 = ["Dakar","Grand Dakar"],
+		Question_6 : "What is the population count?",
+		answers_6 =  "13,6 million",
+		Question_7 : "What is Senegal's growth rate?",
+		answers_7 =  "4%",
+		Question_8 : "What is the percentage of Islam?",
+		answers_8 =  "90%",
+		Question_9 : "What is their internet code?",
+		answers_9 =  ".sn"
+	}
+
+	countries.forEach(function(country, i){
+		var k = 1+i;
+		console.log(k)
+	});
+
+	res.redirect("/senegal_quiz");
+})
+
 app.get("/chad_quiz", function(req, res){
 	res.render("chad_quiz", {chad_quiz:countriesMap["chad_quiz"]});
 });
+
+app.post("/chad_quiz/chad_quiz_report", function(req, res){
+
+	var countries = countriesMap["chad_quiz"];
+
+	var answers = {
+		Question_1 = "What do you call people from Chad?",
+		answer_1 = "Chadians",
+		Question_2 = "What are the colours in Chad nation flag?",
+		answer_2 = ["Red", "Blue", "Yellow"],
+		Question_3 = "Chad's flag is Similar to which countries flag?",
+		answer_3 = "Romania",
+		Question_4 ="Name the two rivers in Chad that are only navigable in wet seasons?",
+		answer_4 = ["Chari river","Legon river"],
+		Question_5 ="Chad's capital town?",
+		answer_5 = "N'Djamena",
+		Question_6 = "Name 2 Chad's official languages?",
+		answer_6 = ["French","Arabic"],
+		Question_7 ="How many regions is Chad divided into?",
+		answer_7 = "22 Regions",
+		Question_8 = "What percantage of Chad's population is poor?"
+		answer_8 = "80%"
+	}
+
+	countries.forEach(function(country, i){
+		var k = 1+i;
+		console.log(k)
+	});
+
+	res.redirect("/chad_quiz",{answer:answer});
+})
 
 app.get("/nigeria_quiz", function(req, res){
 	res.render("nigeria_quiz", {nigeria_quiz:countriesMap["nigeria_quiz"]});
