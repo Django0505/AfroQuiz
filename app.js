@@ -4,14 +4,6 @@ var express = require('express'),
 
 var app = express();
 
-var countries  = {
-	"uganda" : {
-
-		}
-
-};
-
-
 app.engine("handlebars", exphbs({defaultLayout:"main"}));
 app.set("view engine", "handlebars");
 
@@ -24,8 +16,11 @@ app.use("/static", express.static("views"));
 app.use("/static", express.static("."));
 
 var countriesMap = {
-	'uganda' : require("./uganda_questions.json"),
-
+	'uganda_quiz' : require("./uganda_questions.json"),
+	'chad_quiz' : require("./chad_questions.json"),
+	'ethiopia_quiz' : require("./ethiopia_questions.json"),
+	'nigeria_quiz' : require("./nigeria_questions.json"),
+	'senegal_quiz' : require("./senegal_questions.json")
 }
 
 app.get("/", function(req, res){
@@ -41,35 +36,36 @@ app.get('/quiz/:country_name', function(){
 });
 
 app.get("/uganda_quiz", function(req, res){
-	var uganda_quiz = require("./uganda_questions.json");
-
-	res.render("uganda_quiz", {uganda_quiz:uganda_quiz});
+	res.render("uganda_quiz", {uganda_quiz:countriesMap["uganda_quiz"]});
 });
 
 app.post("/uganda_quiz/uganda_quiz_report", function(req, res){
-	var input = JSON.parse(JSON.stringify(req.body));
-	console.log(req.body)
+
+	var countries = countriesMap["uganda_quiz"];
+	var answers = req.body;
+
+	countries.forEach(function(country, i){
+		var k = 1+i;
+		console.log(answers);
+	});
+
 	res.redirect("/");
 })
 
 app.get("/chad_quiz", function(req, res){
-	var chad_quiz = require("./chad_questions.json");
-	res.render("chad_quiz", {chad_quiz:chad_quiz});
+	res.render("chad_quiz", {chad_quiz:countriesMap["chad_quiz"]});
 });
 
 app.get("/nigeria_quiz", function(req, res){
-	var nigeria_quiz = require("./nigeria_questions.json");
-	res.render("nigeria_quiz", {nigeria_quiz:nigeria_quiz});
+	res.render("nigeria_quiz", {nigeria_quiz:countriesMap["nigeria_quiz"]});
 });
 
 app.get("/senegal_quiz", function(req, res){
-	var senegal_quiz = require("./senegal_questions.json");
-	res.render("senegal_quiz", {senegal_quiz:senegal_quiz});
+	res.render("senegal_quiz", {senegal_quiz:countriesMap["senegal_quiz"]});
 });
 
 app.get("/ethiopia_quiz", function(req, res){
-	var ethiopia_quiz = require("./ethiopia_questions.json");
-	res.render("ethiopia_quiz", {ethiopia_quiz:ethiopia_quiz});
+	res.render("ethiopia_quiz", {ethiopia_quiz:countriesMap["ethiopia_quiz"]});
 })
 
 app.get("*", function(req, res){

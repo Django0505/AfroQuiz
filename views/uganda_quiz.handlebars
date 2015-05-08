@@ -10,8 +10,8 @@
 				<div class="funkyradio">
 			        <div class="funkyradio-default col-lg-12">
 			        	{{#each options}}
-			            <input type="checkbox" name="longest_river" id="checkbox1" value="{{this}}" unchecked/>
-			            <label for="checkbox1">{{this}}</label>
+			            <input type="checkbox" name="answer_{{this.id}}" value="{{this.name}}" id="checkbox1"/>
+			            <label for="checkbox1">{{this.name}}</label>
 			            {{/each}}
 			        </div>
 				</div>
@@ -19,9 +19,8 @@
 		</div>
 
 			{{/uganda_quiz}}
-
 		<div>
-			<input type="submit" value="Save">
+			<input type="submit" value="How did I do?">
 		</div>
 
 	</form>
