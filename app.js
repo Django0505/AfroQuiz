@@ -42,14 +42,28 @@ app.get("/uganda_quiz", function(req, res){
 app.post("/uganda_quiz/uganda_quiz_report", function(req, res){
 
 	var countries = countriesMap["uganda_quiz"];
-	var answers = req.body;
+	
+	var answers = {
+			Question_1 : "True or false? Age does not earn earn respect in many families in Nigeria." ,
+			answer_1 : "Nile River",
+			answer_2 : "Altitude",
+			answer_3 : "Tropical",
+			answer_4 : ["Coffee","Tea","Cotton","Flowers"],
+			answer_5 : "None",
+			answer_6 : "Oct 09",
+			answer_7 : "35 million",
+			answer_8 : "2",
+			answer_9 : "National Resistance Movement",
+			answer_10 : "TRUE"
+		};
 
 	countries.forEach(function(country, i){
 		var k = 1+i;
 		console.log(k)
 	});
 
-	res.redirect("/uganda_quiz");
+	res.render("uganda_answers", {answers : answers,
+							});
 })
 
 app.post("/senegal_quiz/senegal_quiz_report", function(req, res){
@@ -87,6 +101,37 @@ app.post("/senegal_quiz/senegal_quiz_report", function(req, res){
 app.get("/chad_quiz", function(req, res){
 	res.render("chad_quiz", {chad_quiz:countriesMap["chad_quiz"]});
 });
+
+app.post("/chad_quiz/chad_quiz_report", function(req, res){
+
+	var countries = countriesMap["chad_quiz"];
+
+	var answers = {
+		Question_1 = "What do you call people from Chad?",
+		answer_1 = "Chadians",
+		Question_2 = "What are the colours in Chad nation flag?",
+		answer_2 = ["Red", "Blue", "Yellow"],
+		Question_3 = "Chad's flag is Similar to which countries flag?",
+		answer_3 = "Romania",
+		Question_4 ="Name the two rivers in Chad that are only navigable in wet seasons?",
+		answer_4 = ["Chari river","Legon river"],
+		Question_5 ="Chad's capital town?",
+		answer_5 = "N'Djamena",
+		Question_6 = "Name 2 Chad's official languages?",
+		answer_6 = ["French","Arabic"],
+		Question_7 ="How many regions is Chad divided into?",
+		answer_7 = "22 Regions",
+		Question_8 = "What percantage of Chad's population is poor?"
+		answer_8 = "80%"
+	}
+
+	countries.forEach(function(country, i){
+		var k = 1+i;
+		console.log(k)
+	});
+
+	res.redirect("/chad_quiz",{answer:answer});
+})
 
 app.get("/nigeria_quiz", function(req, res){
 	res.render("nigeria_quiz", {nigeria_quiz:countriesMap["nigeria_quiz"]});
